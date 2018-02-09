@@ -30,11 +30,41 @@
 let menuState = true;
 let links = document.getElementById('links');
 let menu = document.getElementById('menu');
+let menuIcon = menu.getElementsByTagName('i')[0];
 let minHeight = menu.clientHeight;
 let maxHeight = links.offsetHeight;
 let minWidth = '80';
 let maxWidth = menu.offsetWidth;
-console.log(maxWidth);
+let minusIcon = 'fa-minus';
+let barsIcon = 'fa-bars';
+
+function menuMouseOverHandler() {
+  let {classList} = menuIcon;
+  
+  if (menuState && classList.contains(barsIcon)) {
+    classList.remove(barsIcon);
+    classList.add(minusIcon);
+  } 
+
+  if (!menuState && classList.contains(minusIcon)) {
+    classList.remove(minusIcon);
+    classList.add(barsIcon); 
+  }
+}
+
+function menuMouseLeaveHandler() {
+  let {classList} = menuIcon;
+
+  if (menuState && classList.contains(minusIcon)) {
+    classList.remove(minusIcon);
+    classList.add(barsIcon);
+  }   
+
+  if (!menuState && classList.contains(barsIcon)) {
+    classList.remove(barsIcon);
+    classList.add(minusIcon);
+  }  
+}
 
 function toggleMenu() {
   if (menuState) {
@@ -46,7 +76,21 @@ function toggleMenu() {
     links.style.height = `${maxHeight}px`;
     links.style.width = `${maxWidth}px`;
   }
+
   menuState = !menuState;  
+  let {classList} = menuIcon;
+
+  if (!menuState && classList.contains(minusIcon)) {
+    classList.remove(minusIcon);
+    classList.add(barsIcon);
+  }
+
+  if (!menuState && classList.contains(barsIcon)) {
+    classList.remove(barsIcon);
+    classList.add(minusIcon);
+  }
 }
 
+menu.addEventListener("mouseover", menuMouseOverHandler);
+menu.addEventListener("mouseleave", menuMouseLeaveHandler);
 menu.addEventListener("click", toggleMenu);
