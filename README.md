@@ -25,9 +25,9 @@
             icon: 'fab fa-github fa-2x'
         },
         {
-            name: 'Linux',
-            url: 'https://github.com/torvalds/linux',
-            icon: 'fab fa-github fa-2x'
+            name: 'chromecast-backgrounds',
+            url: 'https://github.com/dconnolly/chromecast-backgrounds',
+            icon: 'fab fa-github fa-2x'   
         }
     ]
 ```
