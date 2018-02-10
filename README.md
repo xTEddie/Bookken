@@ -33,3 +33,10 @@
 ```
 
 You can add icon if you want. Fontawesome is supported by default. You can easily add icon from other libraries/frameworks.
+
+## Credits
+
+[@kemoua](https://github.com/kemoua) for this awesome idea
+
+[@dconolly](https://github.com/dconnolly) for his [chromecast-backgrounds](https://github.com/dconnolly/chromecast-backgrounds) project
+
