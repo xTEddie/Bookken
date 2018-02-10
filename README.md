@@ -55,6 +55,11 @@ You can add icon if you want. Fontawesome is supported by default. You can easil
   <script type="text/javascript" src="js/bookmarks.js"></script>  // Rename js/bookmarks.sample.js to js/bookmarks.js
 ```
 
+## Bookmark
+
+- You can open this page and pin this tab to always have this page opened 
+- You can add that page as your first bookmark bar without putting any name. It will look as follow
+
 ## Credits
 
 [@kemoua](https://github.com/kemoua) for this awesome idea
