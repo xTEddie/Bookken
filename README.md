@@ -14,7 +14,11 @@
 
 ## Set Up Bookmarks
 
-- Open **bookmarks.js**
+- Make a copy of **js/bookmarks.sample.js** and rename the file as follow
+
+```
+    cp js/bookmarks.sample.js js/bookmarks.js
+```
 - Add as many bookmarks as you want
 
 ```
@@ -33,6 +37,12 @@
 ```
 
 You can add icon if you want. Fontawesome is supported by default. You can easily add icon from other libraries/frameworks.
+
+- Fix the javascript import in **index.html**
+
+```
+  <script type="text/javascript" src="js/bookmarks.js"></script>  // Rename js/bookmarks.sample.js to js/bookmarks.js
+```
 
 ## Credits
 
