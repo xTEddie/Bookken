@@ -11,9 +11,8 @@ function getYahooForecast() {
     return response.json();
   }).then((json) => {
     let {results} = json.query;
-    let {item, units} = results.channel;
+    let {location, item, units} = results.channel;
     let {forecast, condition} = item;
-
     let forecastElement = document.getElementById('forecast');
 
     let {code, date, day, temp} = condition;
@@ -31,9 +30,14 @@ function getYahooForecast() {
     degreeSpan.innerHTML = "&deg";
     degreeSpan.setAttribute('class', 'weather-degree');
 
+    let locationParagraph = document.createElement('p');
+    locationParagraph.innerHTML = `${location.city.toUpperCase()}`;
+    locationParagraph.setAttribute('class', 'weather-location');
+
     forecastElement.appendChild(newIcon);
     forecastElement.appendChild(tempSpan);
     forecastElement.appendChild(degreeSpan);
+    forecastElement.appendChild(locationParagraph);
   });
 }
 

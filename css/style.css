@@ -78,3 +78,9 @@ iframe {
 .low-temp {
   font-size: 25px;
 }
+
+.weather-location {
+  margin: 0;
+  font-size: 15px;
+  text-align: center;
+}
