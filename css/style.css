@@ -80,7 +80,7 @@ iframe {
 }
 
 .weather-location {
-  margin: 0;
+  margin: 10px 0 0 0;
   font-size: 15px;
   text-align: center;
 }

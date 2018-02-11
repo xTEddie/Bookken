@@ -15,6 +15,7 @@ function getYahooForecast() {
     let {forecast, condition} = item;
     let forecastElement = document.getElementById('forecast');
 
+    console.log(condition);
     let {code, date, day, temp} = condition;
     let iconClass = yahooWeatherIconMapper(code);
 
@@ -65,6 +66,7 @@ function yahooWeatherIconMapper(code) {
       icon = 'wi-rain-mix';
       break;
     case 7:
+    case 14:
     case 16:
     case 43:
       icon = 'wi-snow';
