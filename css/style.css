@@ -62,9 +62,16 @@ iframe {
   top: 0;
   right: 0;
   color: #fff;
+  background: rgba(15,15,15,.75);
+  border-radius: 5px;
+  padding: 20px;  
 }
 
-.weather-icon, .high-temp, .temp {
+#forecast:hover {
+  opacity: 1;
+}
+
+.weather-icon, .temp, .high-temp, .weather-degree {
   font-size: 50px;
 }
 

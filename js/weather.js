@@ -12,32 +12,27 @@ function getYahooForecast() {
   }).then((json) => {
     let {results} = json.query;
     let {item, units} = results.channel;
-    let {forecast} = item;
+    let {forecast, condition} = item;
 
     let forecastElement = document.getElementById('forecast');
 
-    let {code, date, day, high, low} = forecast[0];
+    let {code, date, day, temp} = condition;
     let iconClass = yahooWeatherIconMapper(code);
 
     let newIcon = document.createElement('i');
     let classNames = `wi ${iconClass} weather-icon`;
     newIcon.setAttribute('class', classNames);
 
-    let highTempSpan = document.createElement('span');
-    highTempSpan.innerHTML = "&nbsp;" + high;
-    highTempSpan.setAttribute('class', 'high-temp');
-
-    let lowTempSpan = document.createElement('span');
-    lowTempSpan.innerHTML = "&nbsp;" + low;
-    lowTempSpan.setAttribute('class', 'low-temp');
+    let tempSpan = document.createElement('span');
+    tempSpan.innerHTML = "&nbsp;" + temp;
+    tempSpan.setAttribute('class', 'temp');
 
     let degreeSpan = document.createElement('span');
     degreeSpan.innerHTML = "&deg";
-    degreeSpan.setAttribute('class', 'temp');
+    degreeSpan.setAttribute('class', 'weather-degree');
 
     forecastElement.appendChild(newIcon);
-    forecastElement.appendChild(highTempSpan);
-    forecastElement.appendChild(lowTempSpan);
+    forecastElement.appendChild(tempSpan);
     forecastElement.appendChild(degreeSpan);
   });
 }
@@ -86,7 +81,9 @@ function yahooWeatherIconMapper(code) {
     case 24:
       icon = 'wi-windy';
       break;
-    case 27, 28:
+    case 26:
+    case 27:
+    case 28:
       icon = 'wi-cloudy';          
       break;
     case 29:
