@@ -69,3 +69,4 @@ You can add icon if you want. Fontawesome is supported by default. You can easil
 
 [@dconolly](https://github.com/dconnolly) for his [chromecast-backgrounds](https://github.com/dconnolly/chromecast-backgrounds) project
 
+[Kirill Kazchek](https://www.flaticon.com/authors/kirill-kazachek) for the [icon](https://www.flaticon.com/free-icon/flash_222188#term=flash&page=1&position=92) taken from [https://www.flaticon.com/](https://www.flaticon.com/)
