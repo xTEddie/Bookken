@@ -56,3 +56,18 @@ main div {
 iframe {
   opacity: .85;
 }
+
+#forecast {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+}
+
+.weather-icon, .high-temp, .temp {
+  font-size: 50px;
+}
+
+.low-temp {
+  font-size: 25px;
+}
