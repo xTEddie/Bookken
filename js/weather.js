@@ -84,6 +84,9 @@ function yahooWeatherIconMapper(code) {
     case 19:
       icon = 'wi-dust';
       break;
+    case 23: 
+      icon = 'wi-strong-wind';
+      break;
     case 24:
       icon = 'wi-windy';
       break;
