@@ -102,6 +102,9 @@ function yahooWeatherIconMapper(code) {
     case 31:
       icon = 'wi-night-clear';
       break;
+    case 34:
+      icon = 'wi-day-sunny';
+      break;
     default:            
       icon = "wi-na";
       break;
